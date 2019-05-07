@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Ruixiang&#39;s Blog">
 <meta property="og:description" content="Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-07T03:32:25.273Z">
+<meta property="og:updated_time" content="2019-05-07T03:47:34.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python词云">
 <meta name="twitter:description" content="Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。">
@@ -389,7 +389,7 @@
                 
               
 
-              <time title="创建时间：2019-05-07 11:09:49 / 修改时间：11:32:25" itemprop="dateCreated datePublished" datetime="2019-05-07T11:09:49+08:00">2019-05-07</time>
+              <time title="创建时间：2019-05-07 11:09:49 / 修改时间：11:47:34" itemprop="dateCreated datePublished" datetime="2019-05-07T11:09:49+08:00">2019-05-07</time>
             
 
             
@@ -447,7 +447,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.3k</span>
+                <span title="本文字数">1.9k</span>
               
 
               
@@ -467,6 +467,8 @@
           
 
           
+            <div class="post-description">Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。</div>
+          
 
         </div>
       </header>
@@ -481,8 +483,7 @@
       
 
       
-        <h3 id="Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。"><a href="#Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。" class="headerlink" title="Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。"></a>Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。</h3><a id="more"></a>
-<h4 id="1、导入相关库"><a href="#1、导入相关库" class="headerlink" title="1、导入相关库"></a>1、导入相关库</h4><pre><code>#用于生成词云
+        <h4 id="1、导入相关库"><a href="#1、导入相关库" class="headerlink" title="1、导入相关库"></a>1、导入相关库</h4><pre><code>#用于生成词云
 from wordcloud import WordCloud
 #用于读取背景图
 import numpy as np
@@ -621,8 +622,6 @@ img.save(&quot;wcd.png&quot;)
                     
                       
                     
-                      
-                    
                     <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -639,10 +638,6 @@ img.save(&quot;wcd.png&quot;)
                     
                   
                     
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -710,7 +705,7 @@ img.save(&quot;wcd.png&quot;)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。"><span class="nav-number">1.</span> <span class="nav-text">Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、导入相关库"><span class="nav-number">1.1.</span> <span class="nav-text">1、导入相关库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、读取文本内容，存入一个变量text"><span class="nav-number">1.2.</span> <span class="nav-text">2、读取文本内容，存入一个变量text</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、使用jieba库中的jieba-lcut-库进行中文分词处理，将结果返回为一个列表wt（英文文本跳过此步）"><span class="nav-number">1.3.</span> <span class="nav-text">3、使用jieba库中的jieba.lcut()库进行中文分词处理，将结果返回为一个列表wt（英文文本跳过此步）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、载入背景图"><span class="nav-number">1.4.</span> <span class="nav-text">4、载入背景图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、在背景图-mask-上生成词云"><span class="nav-number">1.5.</span> <span class="nav-text">5、在背景图(mask)上生成词云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、将词云转换为图片格式"><span class="nav-number">1.6.</span> <span class="nav-text">6、将词云转换为图片格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、显示-存储图片"><span class="nav-number">1.7.</span> <span class="nav-text">7、显示/存储图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注：参考源码"><span class="nav-number">1.8.</span> <span class="nav-text">注：参考源码</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、导入相关库"><span class="nav-number">1.</span> <span class="nav-text">1、导入相关库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、读取文本内容，存入一个变量text"><span class="nav-number">2.</span> <span class="nav-text">2、读取文本内容，存入一个变量text</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、使用jieba库中的jieba-lcut-库进行中文分词处理，将结果返回为一个列表wt（英文文本跳过此步）"><span class="nav-number">3.</span> <span class="nav-text">3、使用jieba库中的jieba.lcut()库进行中文分词处理，将结果返回为一个列表wt（英文文本跳过此步）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、载入背景图"><span class="nav-number">4.</span> <span class="nav-text">4、载入背景图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、在背景图-mask-上生成词云"><span class="nav-number">5.</span> <span class="nav-text">5、在背景图(mask)上生成词云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、将词云转换为图片格式"><span class="nav-number">6.</span> <span class="nav-text">6、将词云转换为图片格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、显示-存储图片"><span class="nav-number">7.</span> <span class="nav-text">7、显示/存储图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注：参考源码"><span class="nav-number">8.</span> <span class="nav-text">注：参考源码</span></a></li></ol></div>
             
 
           </div>

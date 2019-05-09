@@ -117,7 +117,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python词云">
 <meta property="og:url" content="https://huruixiang.github.io/2019/05/07/Python词云/index.html">
-<meta property="og:site_name" content="Ruixiang&#39;s Blog">
+<meta property="og:site_name" content="Ruixiang&#39;s blog">
 <meta property="og:description" content="Python在数据可视化领域有着广泛的应用，而词云是最为常见的一种数据可视化形式。本文要和大家分享的就是用Python制作词云的一般步骤，详细的代码请参考文末外链。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-05-07T09:32:43.685Z">
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>Python词云 | Ruixiang's Blog</title>
+  <title>Python词云 | Ruixiang's blog</title>
   
 
 
@@ -201,7 +201,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Ruixiang's Blog</span>
+        <span class="site-title">Ruixiang's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -371,7 +371,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ruixiang's Blog">
+      <meta itemprop="name" content="Ruixiang's blog">
     </span>
 
     
@@ -437,6 +437,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/07/Python词云/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/07/Python词云/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -539,6 +552,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/09/微信编年史/" rel="prev" title="微信编年史——微信，是一种生活方式">
+                微信编年史——微信，是一种生活方式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -555,6 +584,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
 
   
 
@@ -605,7 +638,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -624,7 +657,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -643,7 +678,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -937,6 +988,36 @@ show_date_time();
   
 
   
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'wtE072pn1xSTRuPet62dpDtg-gzGzoHsz',
+    appKey: '7L1m7GMK6sFMvLpS7xYQc3li',
+    placeholder: '评论一下',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
 
 
   

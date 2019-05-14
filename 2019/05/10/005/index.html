@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="baidu-site-verification" content="6VWurVhWUo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+  <meta name="description" content="最近在备考软中信息系统项目管理工程师，便想着将一些重要的项目管理知识在博客上做一个总结，一方面方便自己复习查阅，另一方面也能和大家交流交流。这是项目管理系列的第一篇，我想和大家聊一聊项目的一些典型生命周期模型的优缺点及其适用范围。">
+<meta name="keywords" content="项目管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目典型生命周期模型的总结">
+<meta property="og:url" content="https://huruixiang.github.io/2019/05/10/005/index.html">
+<meta property="og:site_name" content="Ruixiang&#39;s blog">
+<meta property="og:description" content="最近在备考软中信息系统项目管理工程师，便想着将一些重要的项目管理知识在博客上做一个总结，一方面方便自己复习查阅，另一方面也能和大家交流交流。这是项目管理系列的第一篇，我想和大家聊一聊项目的一些典型生命周期模型的优缺点及其适用范围。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.simesoft.cn/uploads/allimg/140223/20310253G-0.jpg">
+<meta property="og:image" content="http://johng.cn/wp-content/uploads/2017/06/5eee99ae-5dd9-4a88-85df-d41a46f86629.png">
+<meta property="og:image" content="http://s2.sinaimg.cn/orignal/5544469dc91121c598591">
+<meta property="og:updated_time" content="2019-05-14T10:39:46.509Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="项目典型生命周期模型的总结">
+<meta name="twitter:description" content="最近在备考软中信息系统项目管理工程师，便想着将一些重要的项目管理知识在博客上做一个总结，一方面方便自己复习查阅，另一方面也能和大家交流交流。这是项目管理系列的第一篇，我想和大家聊一聊项目的一些典型生命周期模型的优缺点及其适用范围。">
+<meta name="twitter:image" content="http://www.simesoft.cn/uploads/allimg/140223/20310253G-0.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://huruixiang.github.io/2019/05/10/005/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>项目典型生命周期模型的总结 | Ruixiang's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/HuRuixiang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ruixiang's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Have a nice day</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huruixiang.github.io/2019/05/10/005/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="胡瑞祥">
+      <meta itemprop="description" content="Idleness is the root of all evil.">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruixiang's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">项目典型生命周期模型的总结
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-10 20:40:47" itemprop="dateCreated datePublished" datetime="2019-05-10T20:40:47+08:00">2019-05-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-14 18:39:46" itemprop="dateModified" datetime="2019-05-14T18:39:46+08:00">2019-05-14</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/项目管理/" itemprop="url" rel="index"><span itemprop="name">项目管理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/10/005/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/10/005/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
+          
+
+          
+            <div class="post-description"><font size="2">最近在备考软中信息系统项目管理工程师，便想着将一些重要的项目管理知识在博客上做一个总结，一方面方便自己复习查阅，另一方面也能和大家交流交流。这是项目管理系列的第一篇，我想和大家聊一聊项目的一些典型生命周期模型的优缺点及其适用范围。</font></div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h3><blockquote>
+<p><strong>简介：</strong> 瀑布模型也叫预测型生命周期、完全计划驱动型生命周期。这个模型里，在项目生命周期的尽早时间，要确定项目范围及交付此范围所需的时间和成本。这个模型一般将软件的开发分为可行性分析（计划）、需求分析、软件设计（概要设计、详细设计）、编码（含单元测试）、测试、运行维护等几个阶段。上一阶段的输出作为本阶段的输入，环环相扣。</p>
+</blockquote>
+<div align="center"><img src="http://www.simesoft.cn/uploads/allimg/140223/20310253G-0.jpg" width="65%" height="65%/"></div>
+
+<blockquote>
+<p><strong>优点：</strong><br>1、为项目提供了按阶段划分的检查点。<br>2、当前一阶段完成后，只需要去关注后续阶段。<br>3、可在迭代模型中应用瀑布模型。<br>4、它提供了一个模板，这个模板使得分析、设计、编码、测试和支持的方法可以在该模板下有一个共同的指导。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong><br>1、各个阶段的划分完全固定，阶段之间产生大量的文档，极大地增加了工作量。<br>2、由于开发模型是线性的，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发风险。<br>3、通过过多的强制完成日期和里程碑来跟踪各个项目阶段。<br>4、不适应用户需求的变化。<br>5、由于是单一流程，开发中的经验教训不能反馈应用于本产品的过程。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目：</strong><br>1、需求明确或很少变更的项目。<br>2、已有类似项目开发经验的项目。</p>
+</blockquote>
+<h3 id="敏捷开发模型"><a href="#敏捷开发模型" class="headerlink" title="敏捷开发模型"></a>敏捷开发模型</h3><blockquote>
+<p><strong>简介：</strong> 敏捷方法，也叫适应性生命周期、或者变更驱动方法。在软件项目的敏捷开发中，软件项目的构建被切分为多个子项目，各个子项目的成果都经过测试，具备集成和可运行的特征。简言之，就是把一个大项目返程多个相互联系，但也可独立运行的 小项目，并分别完成，在此过程中软件一直处于可使用状态。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong><br>1、精确。敏捷方法采用小步快跑，每走完一步再调整并为下一步确定方向，直到真正的终点。<br>2、质量。敏捷方法对每一次迭代周期的质量都有严格要求。一些敏捷方法如极限编程等，甚至使用测试驱动开发(test-driven development)，即在正式开发功能代码之前先开发该功能的测试代码。这些都为敏捷项目的整个开发周期提供了可靠的质量保证。<br>3、速度。敏捷团队只专注于开发项目中当前最需要的、最具价值的部分。这样能很快地投入开发。另外，较短的迭代周期使团队成员能迅速进入开发状态。<br>4、丰厚的投资回报率。在敏捷开发过程中，最具价值的功能总是被优先开发，这样能给客户带来最大的投资回报率。<br>5、高效的自我管理团队。敏捷开发要求团队成员必须积极主动，自我管理。在这样的团队中工作，每个团队成员的技术能力、交流、社交、表达和领导能力也都能得以提高。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong> 敏捷注重人员的沟通，忽略文档的重要性，若项目人员流动大太，将给维护带来不少难度，特别项目存在新手比较多时，老员工比较累。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目:</strong><br>1、项目团队的人数不太多<br>2、项目经常发生变更<br>3、高风险的项目实施<br>4、开发人员可以参与决策</p>
+</blockquote>
+<h3 id="原型化模型"><a href="#原型化模型" class="headerlink" title="原型化模型"></a>原型化模型</h3><blockquote>
+<p><strong>简介：</strong> 原型化的第一步是建造一个快速原型，实现客户或未来用户与系统的交互，经过和用户针对原型的讨论和交流，确定用户需求。充分了解后，再在原型基础上开发出用户满意的产品。原型最重要的是确定用户的真正需求。</p>
+<ul>
+<li>抛弃型原型：开发原型为了获取需求，在原型开发之后，以获取了更为清晰的需求信息，原型无需保留而废弃。一般分为需求分析、原型实现和客户评价3个阶段。</li>
+<li>渐进型原型：原型作为软件最终产品的一部分，可满足用户的部分需求，进一步在此基础上开发，最后交付使用。一般分为需求分析、设计、编码、发布、实施、运维6个阶段。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong> 软件产品的开发基本上是线性的。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong><br>1、没有考虑软件的整体质量和长期可维护性。<br>2、大部分情况下不合适的操作算法被采用的目的是为了演示功能，不合适的开发工具被采用仅仅为了它的方便，还有不合适的操作系统被选择等等。<br>3、由于达不到质量要求，产品可能被抛弃，而采用新的模型重新设计。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目：</strong><br>1、客户能提出一般性的目标，但不能标出详细的输入、处理和输出需求。<br>2、开发者不能确定算法的有效性、操作系统的适应性以及人机交互的形式</p>
+</blockquote>
+<h3 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h3><blockquote>
+<p><strong>简介：</strong> 螺旋模型是一个演化软件过程的模型，将原型实现的迭代特征与线性顺序（瀑布）模型中控制和系统化的方面结合起来，使得软件的增量版本的快速开发成为可能。<br>螺旋模型沿着螺线旋转，自内向外每旋转一圈便开发出更完善的一个新版本。一个螺旋为一个阶段，每个螺旋式周期可分为：制定计划、风险分析、实施工程和客户评估。</p>
+</blockquote>
+<div align="center"><img src="http://johng.cn/wp-content/uploads/2017/06/5eee99ae-5dd9-4a88-85df-d41a46f86629.png" width="65%" height="65%/"></div>
+
+<blockquote>
+<p><strong>优点：</strong><br>1、设计上的灵活性，可以在项目的各个阶段进行变更。<br>2、以小的分段来构建大型系统，使成本计算变得简单容易。<br>3、客户始终参与每个阶段的开发，保证了项目不偏离正确方向以及项目的可控性。<br>4、随着项目推进，客户始终掌握项目的最新信息，从而他或她能够和管理层有效地交互。<br>5、客户认可这种公司内部的开发方式带来的良好的沟通和高质量的产品。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong> 很难让用户确信这种演化方法的结果是可以控制的。建设周期长，而软件技术发展比较快，所以经常出现软件开发完毕后，和当前的技术水平有了较大的差距，无法满足当前用户需求。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目：</strong> 庞大复杂、风险较高的项目。 </p>
+</blockquote>
+<h3 id="迭代模型"><a href="#迭代模型" class="headerlink" title="迭代模型"></a>迭代模型</h3><blockquote>
+<p><strong>简介：</strong> 迭代模型，摒弃了传统的需求分析，设计，编码，测试的流程，而是将整个生命周期变成若干个冲刺（Sprint）阶段，而每一个阶段都是由以上若干或者全部传统的流程组成，在每一个阶段中，都会包含下面四个阶段：初始阶段，细化阶段，构建阶段，交付阶段。<br>在初始阶段中，确认本次冲刺的范围、边界、系统选择的架构、计划、以及所需要的资源等信息。在细化阶段中，对问题进行建域，创建开发案例，创建模板以及准备工具等。在构建阶段的主要任务就是完成构建的开发并且进行测试，将完成的构建集成为产品，并且测试所有的功能（CI）。在交付阶段，主要是完成本次冲刺，将软件产品交付给相关的干系人。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong><br>1、降低了在一个增量上的开支风险。如果开发人员重复某个迭代，那么损失只是这一个开发有误的迭代的花费。<br>2、降低了产品无法按照既定进度进入市场的风险。通过在开发早期就确定风险，可以尽早来解决而不至于在开发后期匆匆忙忙。<br>3、加快了整个开发工作的进度。因为开发人员清楚问题的焦点所在，他们的工作会更有效率。<br>4、由于用户的需求并不能在一开始就作出完全的界定，它们通常是在后续阶段中不断细化的。因此，迭代过程这种模式使适应需求的变化会更容易些。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong> 项目早期开发可能有所变化 ，需有一个高素质的项目管理者和一个高技术水平的开发团队。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目:</strong><br>1、在项目开发早期需求可能有所变化。<br>2、分析设计人员对应用领域很熟悉。<br>3、高风险项目。<br>4、用户可不同程度地参与整个项目的开发过程。<br>5、使用面向对象的语言或统一建模语言（UML）。<br>6、使用CASE工具，如Rose。<br>7、具有高素质的项目管理者和软件研发团队。</p>
+</blockquote>
+<h3 id="V模型"><a href="#V模型" class="headerlink" title="V模型"></a>V模型</h3><blockquote>
+<p><strong>简介：</strong> V模型的左边下降的是开发过程各阶段，与此相对应的是右边上升的部分，即测试过程的各个阶段。开发过程依次是需求分析、概要设计、详细设计、编码；测试过程依次是单元测试、集成测试、系统测试、验收测试。</p>
+</blockquote>
+<div align="center"><img src="http://s2.sinaimg.cn/orignal/5544469dc91121c598591" width="65%" height="65%/"></div>
+
+<blockquote>
+<p><strong>优点：</strong><br>1、非常明确的表明了测试过程中存在的不同的级别，并且非常清晰的描述了这些测试阶段和开发阶段的对应关系。<br>2、将开发阶段清楚的表现出来，便于控制开发的过程。当所有阶段都结束时，软件开发就结束了。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong> V模型仅仅把测试过程作为在需求分析、系统设计及编码之后的一个阶段，忽视了测试对需求分析,系统设计的验证，需求的满足情况一直到后期的验收测试才被验证。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目:</strong>  V模式是一种传统软件开发模型，一般适用于一些传统信息系统应用的开发。而一些高性能高风险的系统、互联网软件，或一个系统难以被具体模块化的时候，就比较难做成V模式所需的各种构件，需要更强调迭代的开发模型或者敏捷开发模型。</p>
+</blockquote>
+<h3 id="喷泉模型"><a href="#喷泉模型" class="headerlink" title="喷泉模型"></a>喷泉模型</h3><blockquote>
+<p><strong>简介：</strong> 喷泉模型（fountain model）是一种以用户需求为动力，以对象为驱动的模型，主要用于描述面向对象的软件开发过程。该模型认为软件开发过程自下而上周期的各阶段是相互迭代和无间隙的特性。</p>
+</blockquote>
+<blockquote>
+<p><strong>优点：</strong> 该模型的各个阶段没有明显的界限，开发人员可以同步进行开发。其优点是可以提高软件项目开发效率，节省开发时间，适应于面向对象的软件开发过程。</p>
+</blockquote>
+<blockquote>
+<p><strong>缺点：</strong> 由于喷泉模型在各个开发阶段是重叠的，因此在开发过程中需要大量的开发人员，因此不利于项目的管理。此外这种模型要求严格管理文档，使得审核的难度加大，尤其是面对可能随时加入各种信息、需求与资料的情况。</p>
+</blockquote>
+<blockquote>
+<p><strong>适用项目:</strong> 面向对象的软件开发项目。</p>
+</blockquote>
+<p><em>参考资料：</em><br>【1】<a href="https://pan.baidu.com/s/11GpReKoCiQQOeHa-Eg5e-Q" target="_blank" rel="noopener">《系统集成项目管理工程师教程》第二版，清华大学出版社</a><br>【2】<a href="https://blog.csdn.net/juliefish/article/details/12855675" target="_blank" rel="noopener">5种项目生命周期模型（个人笔记）</a><br>【3】<a href="https://blog.csdn.net/ziwen00/article/details/40583107" target="_blank" rel="noopener">五种典型开发周期模型（瀑布、V、原型化、螺旋、迭代）</a><br>【4】<a href="https://blog.csdn.net/xiaoxiaodongshige/article/details/48790567" target="_blank" rel="noopener">软件生命周期模型优缺点及适用范围</a><br>【5】<a href="https://johng.cn/soft-dev-mode-comparison/#i-2" target="_blank" rel="noopener">常见软件开发模型对比：瀑布、迭代、螺旋、敏捷</a><br>【6】<a href="https://blog.csdn.net/iteye_14109/article/details/82359474" target="_blank" rel="noopener">为什么要敏捷开发，敏捷开发有什么好处？</a><br>【7】<a href="https://baike.baidu.com" target="_blank" rel="noopener">百度百科</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/项目管理/" rel="tag"><i class="fa fa-tag"></i> 项目管理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/09/004/" rel="next" title="中国直播沉浮录">
+                <i class="fa fa-chevron-left"></i> 中国直播沉浮录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/13/006/" rel="prev" title="利用Python和Gephi制作人物关系网络图">
+                利用Python和Gephi制作人物关系网络图 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.jpg" alt="胡瑞祥">
+            
+              <p class="site-author-name" itemprop="name">胡瑞祥</p>
+              <div class="site-description motion-element" itemprop="description">Idleness is the root of all evil.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/HuRuixiang" title="GitHub &rarr; https://github.com/HuRuixiang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://tuchong.com/1690244/" title="Tuchong &rarr; https://tuchong.com/1690244/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Tuchong</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.weibo.com/6040489819/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Weibo &rarr; https://www.weibo.com/6040489819/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#瀑布模型"><span class="nav-number">1.</span> <span class="nav-text">瀑布模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#敏捷开发模型"><span class="nav-number">2.</span> <span class="nav-text">敏捷开发模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型化模型"><span class="nav-number">3.</span> <span class="nav-text">原型化模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#螺旋模型"><span class="nav-number">4.</span> <span class="nav-text">螺旋模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代模型"><span class="nav-number">5.</span> <span class="nav-text">迭代模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#V模型"><span class="nav-number">6.</span> <span class="nav-text">V模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#喷泉模型"><span class="nav-number">7.</span> <span class="nav-text">喷泉模型</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">胡瑞祥</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">8k</span>
+  
+
+  
+</div>
+
+<!-- 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.1</div>
+-->
+
+
+
+<!-- <div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("04/17/2018 15:13:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>-->
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="190,190,190" opacity="0.7" zindex="-1" count="70" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'wtE072pn1xSTRuPet62dpDtg-gzGzoHsz',
+    appKey: '7L1m7GMK6sFMvLpS7xYQc3li',
+    placeholder: '评论一下，可以在上面留下自己的昵称、邮箱和主页哦~',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心，在末尾添加，避免找不到 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":180,"height":360,"hOffset":70,"vOffset":-70},"mobile":{"show":false},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false,"tagMode":false});</script></body>
+</html>

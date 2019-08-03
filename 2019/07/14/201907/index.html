@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="baidu-site-verification" content="6W9gYKXCza">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+  <meta name="description" content="这篇博客专门用来记录自己关于产品的一些比较零散的思考，每天思考一个小问题，希望自己能够坚持下去！！">
+<meta name="keywords" content="日更,产品思考,问题,点子,唠嗑,笔试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每天思考一个产品问题（七月篇）">
+<meta property="og:url" content="https://huruixiang.github.io/2019/07/14/201907/index.html">
+<meta property="og:site_name" content="Ruixiang&#39;s blog">
+<meta property="og:description" content="这篇博客专门用来记录自己关于产品的一些比较零散的思考，每天思考一个小问题，希望自己能够坚持下去！！">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-03T07:01:38.666Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="每天思考一个产品问题（七月篇）">
+<meta name="twitter:description" content="这篇博客专门用来记录自己关于产品的一些比较零散的思考，每天思考一个小问题，希望自己能够坚持下去！！">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://huruixiang.github.io/2019/07/14/201907/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>每天思考一个产品问题（七月篇） | Ruixiang's blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/HuRuixiang" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ruixiang's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Have a nice day</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huruixiang.github.io/2019/07/14/201907/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="胡瑞祥">
+      <meta itemprop="description" content="Idleness is the root of all evil.">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ruixiang's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">每天思考一个产品问题（七月篇）
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color="red">置顶</font>
+            <span class="post-meta-divider">|</span>
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-14 09:44:49" itemprop="dateCreated datePublished" datetime="2019-07-14T09:44:49+08:00">2019-07-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-03 15:01:38" itemprop="dateModified" datetime="2019-08-03T15:01:38+08:00">2019-08-03</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/每天思考一个产品问题/" itemprop="url" rel="index"><span itemprop="name">每天思考一个产品问题</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/07/14/201907/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/14/201907/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">18k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">16 分钟</span>
+              
+            </div>
+          
+
+          
+            <div class="post-description"><font size="2">这篇博客专门用来记录自己关于产品的一些比较零散的思考，每天思考一个小问题，希望自己能够坚持下去！！</font></div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>写在前面：这篇博客里面的问题，有的来自于网络，但问题的回答，都有我自己的思考。我的有些想法可能不太成熟，甚至很幼稚，如果您有不同的意见，欢迎在评论区交流讨论。</p>
+<hr>
+<h3 id="7月31日"><a href="#7月31日" class="headerlink" title="7月31日"></a>7月31日</h3><blockquote>
+<p><strong>笔试题：什么样的产品，适合做成小程序？</strong></p>
+</blockquote>
+<p>腾讯2018年春招产品笔试题中，有一个让设计一个微信小程序，并说明核心功能、解决痛点和应用场景的题目。</p>
+<p>私以为这道题要考察的是应聘者在日常生活中发现问题和解决问题的能力，进一步说，是考察应聘者发现需求的能力。毕竟在短时间内要相处一个自洽的方案，有一定的难度，这种题目重在平时的思考和项目的积累。</p>
+<p>而具体到本题中，明确要求了是设计微信小程序，而不是APP，这也是问题的一个关键所在。今天并不想完整地回答这个题目，只是想以微信小程序为突破口，聊一聊什么样的产品，适合做成小程序。</p>
+<p>在回答这个问题之前，让我们先来了解一下小程序。</p>
+<p><strong>微信小程序是什么？</strong></p>
+<blockquote>
+<p>微信小程序于2016年9月21日开始内测，2017年1月9日正式上线，是一种不需要下载安装即可使用的应用，用户通过搜一搜、扫一扫或者公众号等入口，进入小程序。随时可用，用完即走。</p>
+</blockquote>
+<p><strong>微信小程序的定位是什么？</strong></p>
+<p>关于小程序的定位，目前主流的看法有两种：</p>
+<p><strong>第一种，连接线上线下。</strong>张小龙说过，“我们更多的是希望小程序的启动来自于扫二维码”，线下商家应该是小程序的最大需求方，二维码才是小程序最大的入口。</p>
+<p><strong>第二种，简单需求。</strong>由于小程序本身的体量限制，复杂的需求是小程序无法承担的。</p>
+<p><strong>微信小程序有哪些特点？</strong></p>
+<p>1、开发难度低，成本低：相比于APP，小程序的开发难度要低上很多，这既是其优势也是其劣势，轻量级的应用毕竟难以承受更压力的访问。</p>
+<p>2、无需下载安装，用完即走：可以把小程序看作在微信上的云端应用，用户无需下载安装到本地，节省了本地空间，减小了使用成本。</p>
+<p>3、入口多样：微信小程序能够从多种入口进入，如小程序码、公众号菜单、公众号推文内部、搜一搜、H5等等。</p>
+<p>4、传播能力强：依托于微信的社交网络，微信小程序具有天然的传播优势，能够实现更快的产品推广和市场营销。</p>
+<p><strong>什么样的产品适合做成小程序？</strong></p>
+<p>通过小程序的定位和特点，很容易能够分析出什么样的产品适合做成小程序：</p>
+<p>1、功能比较简单。</p>
+<p>2、需求场景比较单一。</p>
+<p>3、需要连接线上线下。</p>
+<p>4、非常依赖于社交网络。</p>
+<h3 id="7月30日"><a href="#7月30日" class="headerlink" title="7月30日"></a>7月30日</h3><blockquote>
+<p><strong>问题：当我们使用一款产品的时候，应该想些什么？</strong></p>
+</blockquote>
+<p>作为一个产品学习者，如果没有机会真正参与到产品的设计与迭代中，那么最好的学习方法便是去学习现有的优秀产品，从中汲取养分。</p>
+<p>当我们使用一款产品的时候，应该想些什么？或者说，我们应该从哪些方面去研究一款产品呢？我想谈谈我的看法。</p>
+<p><strong>1、用户：</strong>我把用户放在第一位。研究一款产品，首要要清楚产品的目标群体是什么，规模有多大，有什么特征，即用户画像是怎么样的。研究产品的用户需要数据的支撑，没有数据等于白说，因此需要去做一定的信息搜集。一方面，可以从专业数据平台获取到一些数据，如艾瑞、易观等；另一方面，也需要自己去网络中搜集一些信息，比如论坛、应用商店等。</p>
+<p><strong>2、功能：</strong>产品功能是用户需求转为变为产品需求的体现，每一个功能的上线，都有其内在的逻辑。对产品功能进行研究，要思考每一个功能解决了用户的什么需求，应用场景是什么，是不是必须的，功能的入口是怎样的等等。</p>
+<p><strong>3、UED：</strong>即用户体验设计（User Experience Design），分为交互设计和视觉设计两个层面。</p>
+<p>交互设计：首先，把自己当做一个最普通的用户去使用产品，体会其交互设计是否合理，能否简单高效地帮助用户使用产品。我认为，好的交互设计应做到尽可能的简单、高效、易记。</p>
+<p>视觉设计：产品的视觉设计应符合产品的气质，这个很关键。可以想象一下，如果微信的主色调使用淘宝红，将会多么滑稽。其次视觉设计应该起到引导用户视线的作用，帮助用户将视觉焦点放在应该放的位置。同时通过颜色、图标等视觉元素，减少用户使用产品的操作成本。最后，视觉设计应做到尽可能的美观。视觉设计能用，只是对视觉设计师的基本要求；而赏心悦目，让用户使用产品成为一种享受，才应是视觉设计师们的追求。</p>
+<p><strong>4、迭代：</strong>查看产品迭代历史，将自己代入产品开发团队的角色，思考为什么要这样迭代，产品的结构、功能、交互、UI等各个方面变动的内在原因是什么。去研究产品的迭代历史，同样需要查相关的资料。产品的版本介绍、应用商店信息、七麦数据、企鹅风控等平台，都可以查询到产品的历史版本信息。</p>
+<p><strong>5、竞品：</strong>研究某一款产品时，如果仅仅只看这一款产品，容易陷入“不是庐山真面，只缘身在此山中”的困境。所以，对某款产品进行研究时，除了着重体验该产品本身，同时也应该对其竞品进行一定的了解。通过横向的对比，寻找与竞品之间的差异性，并思考这些差异产生的内在原因，能够进一步加深自己对该产品的理解。</p>
+<p>使用一款产品时，从以上五个方面去思考，也许能让你透过产品的表面，获得更加深刻的感悟。</p>
+<h3 id="7月29日"><a href="#7月29日" class="headerlink" title="7月29日"></a>7月29日</h3><blockquote>
+<p><strong>唠嗑：再谈个性化推荐。</strong></p>
+</blockquote>
+<p>前几天说到了个性化造成的“信息茧房”的问题，今天晚上在字节跳动在武汉的校招宣讲会上，刚好有人提出了同样的问题，头条的技术负责人的回答，让我对这个问题有了新的看法，在此整理一下。</p>
+<p>产品做个性化推荐的目标，分为两个层次：</p>
+<p><strong>第一个层次：推送用户感兴趣的东西。</strong></p>
+<p>这一层次，也是包括我在内大多数人对个性化推荐的理解。可能是由于对具体的推荐算法没有深入的了解，所以这种观点是比较肤浅的。如果产品只能做到这种层次的个性化推荐，那么必然会造成“信息茧房”的问题。这种层次的推荐算法，只会让用户的视野越来越狭窄。从短期而言，确实可是获取用户更多的停留时间，从而获得更高的经济效益。但从长远来看，这种推荐算法为用户推荐的都是千篇一律的内容，即使是用户感兴趣的，也终有一天会厌倦，从而造成用户的逃离。 </p>
+<p><strong>第二个层次：推荐用户感兴趣却不知道自己感兴趣的东西。</strong></p>
+<p>这句话说起来比较绕，其实说白了就一句话，就是要做到比用户自己更懂自己。通过对用户行为数据的分析，从深层次完成对用户的画像，发掘用户的潜在兴趣点，从而创造源源不断的用户兴趣源。这一层次的推荐算法，才算是真正意义上的个性化推荐。当然，可能在技术上存在不小的困难。</p>
+<p>个性化推荐对用户来说是一种被动的消息接收方式，长时间吃别人喂到嘴边的饭，不得不提高警惕。不管真正意义上的个性化推荐能否真正破解“信息茧房”的问题，作为用户，不论在什么时候都要有辨别信息的眼光和主动搜集信息的能力，不然就是温水煮青蛙，后悔已晚矣。</p>
+<h3 id="7月28日"><a href="#7月28日" class="headerlink" title="7月28日"></a>7月28日</h3><blockquote>
+<p><strong>唠嗑：说一说用户体验五要素。</strong></p>
+</blockquote>
+<p>用户体验：即User Experience，用户体验是用户使用产品时的心理、感受，之后对产品的印象、评价。</p>
+<p>用户体验五要素分别为：战略层、范围层、结构层、框架层、表现层</p>
+<p><strong>1、战略层：</strong>产品目标（做什么-用户需求）、用户群体（为谁而做）</p>
+<p><strong>2、范围层：</strong>产品功能（怎么做），将用户需求转化为产品需求，产品功能的确定，应紧随产品战略，否则产品会面临很大的调整，甚至夭折。必须时刻牢记战略目标：用户是什么，用户的需求是什么。战略与范围的关系是：战略决定范围，范围实现战略。</p>
+<p><strong>3、结构层：</strong>产品架构与交互设计。结构层，需要考虑如何将范围层的功能排列、组织，从而提升用户产品体验。功能怎么组织，信息怎么流动。在功能型产品中，结构层关注怎么相应用户的需求；在内容型产品中，    结构层关注如何组织内容元素的分布。</p>
+<p><strong>4、框架层：</strong>界面设计、导航设计、内容设计。一眼让用户看到最重要的东西，不要让用户去思考。</p>
+<p><strong>5、表现层：</strong>视觉呈现（UI设计），表现层要做的就是将产品的功能和内容以一种高效和美的方式来呈现，从而帮助其他层面目标的实现。好的视觉设计应满足两个条件：</p>
+<p>①高效：能通过视觉上的引导帮助用户使用和理解产品，减少用户使用产品时的思考，从而高效的完成操作。</p>
+<p>②美：让用户赏心悦目地使用产品是视觉设计师的使命，要做到用户不光需要使用该产品，并且享受使用该产品。</p>
+<h3 id="7月27日"><a href="#7月27日" class="headerlink" title="7月27日"></a>7月27日</h3><blockquote>
+<p><strong>点子：简历填写插件。</strong></p>
+</blockquote>
+<p>最近开始投秋招的简历，最让我头疼的就是网申，既费时又费力。</p>
+<p>大多数有一定规模的公司，都有自己的网申系统，虽然主体内容差不多，但总还是有一些差异。网申的过程，抽象出来就是在做有部分差异的重复性劳动，而劳动场所大多数时候是在web网页。因此，我在想能不能有一款网页插件，帮助求职者填写简历。这个简历填写插件应该满足几点要求：</p>
+<p><strong>1、识别率高：</strong>能够准确地识别出网申系统，并找到页面中的相关字段，将信息自动填入。</p>
+<p><strong>2、兼容性高：</strong>适用于市面上的多种主流浏览器。</p>
+<p><strong>3、可动态更新：</strong>这个是核心功能，插件里面字段和信息，应该能够随着网申数量的增多，不断地增加和更新，目的是不断提高插件在不同网申系统中的适应性。</p>
+<p>当然的，已经有人做了，牛客网就有一个帮助求职者“闪填”简历信息的插件。用户需要在牛客网的系统中，填写好一份完整的简历信息，然后安装牛客网的浏览器的插件。当用户其他公司系统进行网申时，插件会自动识别是否为网申系统，如果是就会在浏览器的右边框弹出。用户点击“一键填写”，插件会自动识别页面中的字段，将与之匹配的信息填入文本框中。</p>
+<p><strong>牛客网的“闪填”插件确实起到了提高网申效率的作用，但其中存在一些不足之处：</strong></p>
+<p>1、插件对文本框的填写率比较高，但对用日期选择器、单选框、下拉框等组件的识别率较低。</p>
+<p>2、核心问题：插件中的简历信息是固定不变的，模板也是固定的，有哪些字段、哪些选项，这些都是不能改变的，这就给其带来了很大的局限性，往往只能完成60%左右甚至更低的填写任务。</p>
+<p>因此，抛开用户体验等问题不谈，以上两点是牛客网“闪填”插件应该着力解决的问题。如果其真的能做到高识别率和动态更新，那么它将成为真正的简历填写利器，造福广大校招苦逼党。</p>
+<h3 id="7月26日"><a href="#7月26日" class="headerlink" title="7月26日"></a>7月26日</h3><blockquote>
+<p><strong>唠嗑：个性化推荐，到底是让人看见更大的世界还是更小的世界？</strong></p>
+</blockquote>
+<p>昨天说到短视频为什么会火的时候，提到了个性化推荐，让我突然想到了一个问题，那就是今天想唠嗑的：个性化推荐，到底是让人看见更大的世界还是更小的世界？</p>
+<p>个性化推荐是一种信息流展示的方式，广泛应用在各种内容展示场景中，最常见的比如：网易云音乐的每日推荐、知乎的推荐板块、抖音的主页的所有视频、今日头条的资讯（不得不说个性化推荐真是字节跳动的看家本领了）等等。</p>
+<p><strong>个性化推荐的优点显而易见：</strong></p>
+<p>1、对于平台方来说，采用个性化推荐算法，能够将用户感兴趣的内容直接推送到用户眼前，吸引用户注意力，从而获得用户更长的停留时间，同时还能增强用户粘性。特别是对于电商平台来说，个性化推荐能将用户想要购买或者感兴趣的商品，推送到用户能看到的各种显眼的位置（比如淘宝APP首页的banner），直接引导用户进行购物，完成交易额的增加。</p>
+<p>2、对于用户来说，个性化推荐能够减少用户获取信息的成本，获得更好的使用体验，真正做到“饭来张口，衣来伸手”。</p>
+<p>随之而来的，个性化推荐的缺点也显而易见，不过这个缺点主要是对于用户而言的。</p>
+<p>个性化推荐的可怕之处在于，你爱看什么，它就给你推送什么，然后你就会看得更多，接着它就给推送得更多更准！这是一个死循环。对于平台而言，当然乐于看到这种情况，但对于用户而言，它让用户变得越来越懒，当用户习惯了这种“嗟来之食”的时候，用户能够获取到的信息将越来越集中，用户的视野将被牢牢的困在自己感兴趣的地方，难以脱身。在这种情况下，只有用户主动地去看新的领域的内容，才有可能接收到新的信息。</p>
+<p>当然，技术本身是没有对错之分的，主要看人怎么地使用它。个性化推荐是一种非常高效的信息展示方式，但作为用户，也要对此保持警醒，切莫困住自己的眼光！</p>
+<p><strong>我们使用互联网，应当去看见更大的世界！</strong></p>
+<h3 id="7月25日"><a href="#7月25日" class="headerlink" title="7月25日"></a>7月25日</h3><blockquote>
+<p><strong>问题：短视频应用为何会火？</strong></p>
+</blockquote>
+<p>这其实是一个很老的问题了，有很多的人都对此进行过深入的分析，今天我再拿出来说，其实也并没有什么新奇的观点，主要是对这个问题做一个回顾和总结。毕竟，短视频应用的火爆，是近三年来互联网领域不可忽视的一场“狂欢”，甚至直接促使了字节跳动和快手科技两个独角兽的诞生。</p>
+<p><strong>短视频应用火爆的原因是多方面的：</strong></p>
+<p><strong>1、技术层面：</strong> 移动网络速度的增快，是短视频应用得以发展的技术原因。短视频正因为“短”，所以格外注重一个“快”字。用户也许还能忍受观看长视频时的缓冲加载问题，但绝对无法忍受观看短视频的时候出现一丝一毫的卡顿。毕竟视频本来就很短了，再卡顿几秒，那就不是看视频而是看卡屏了。</p>
+<p><strong>2、经济层面：</strong> 近年来，移动网络资费的不断下调，各种“大王卡”层出不穷，让用户不再对流量像以前那样吝惜，再加上各移动网络运营商推出的种类繁多的短视频定向流量套餐，免去了用户流量的后顾之忧。</p>
+<p><strong>3、产品层面：</strong></p>
+<p>①使用成本低：短视频制作方法简单，用户容易上手，并且在任何一点的碎片化时间都可以看，不会给用户带来额外的机会成本。</p>
+<p>②优质内容多：短视频应用内有各种各样的UGC和PGC视频内容，能为用户带来丰富的视觉体验。而正因为视频短，所以基本上都是精华，能在极端的时间内带给用户很强的冲击力，刺激到用户的兴奋点。</p>
+<p>③沉浸式交互：短视频应用大多采用全屏的视频展示方式，能够给用户带来沉浸式的观看体验，再加上及其简单的操作逻辑，往往让用户一“刷”不可收拾。</p>
+<p>④个性化推荐：根据用户的浏览习惯对用户的偏好进行分析，从而使用推荐算法对用户进行个性化的推荐，用户看到的内容都是自己感兴趣的，当用户不知不觉沉浸其中的时候，也许连自己也没有发现，这也正是个性化推荐的可怕之处。</p>
+<p>⑤精细化运营：短视频的火爆除了产品本身的因素之外，还离不开其花样百出的运营手段。明星代言、广告轰炸、红包奖励等等活动层出不穷，甚至抖音还成为了2019年春晚的独家社交媒体平台。</p>
+<h3 id="7月24日"><a href="#7月24日" class="headerlink" title="7月24日"></a>7月24日</h3><blockquote>
+<p><strong>唠嗑：用户下沉二三言。</strong></p>
+</blockquote>
+<p>说来惭愧，我的专业是电子商务，但直到拼多多上市的2018年夏天，我才知道这款黑马般的电商产品。</p>
+<p>后来反思，为什么会这样？当然这和当时不学无术脱不开关系，但我想还有一部分原因在于，我身边很少有人在用拼多多。可见，拼多多的目标用户和目标市场并不在此。那么，到底是谁，把拼多多“用”上市的呢？原因想必大家都很清楚：下沉用户。</p>
+<p><strong>下沉用户，是指三四线及其以下城市的用户，其它主要特征有：</strong></p>
+<p>1、生活节奏慢，关注娱乐活动。</p>
+<p>2、生活成本和消费水平较低，对产品和服务的价格比较敏感，品牌意识相对不高。</p>
+<p>3、社交方式以熟人社交为主。</p>
+<p>近年来，以下沉用户取得成功的产品，不止拼多多一个，抖音、快手、趣头条也都是声名在外产品。</p>
+<p>下沉用户市场为什么会在近几年来获得资本的青睐，原因有两个方面：第一，一二线城市在基础设施和生活服务的各个层面都已相当完善，市场竞争激烈，产品用户趋于饱和，增长代价增大；第二，随着城市化进程的推动，三四线城市的经济发展水平不断提高，城市消费升级的潜力开始释放，并且由于我国数字化发展不均衡，三四线城市还存有巨大的蓝海市场和用户红利。</p>
+<p>我国互联网从萌芽到快速发展的二三十年来，产品大多聚焦经济发达地区的用户，因为他们有购买力，能为产品带来利润，很少人人会把眼光放到人口数量庞大的，经济欠发达地区的用户身上。但随着城市化进程的加、互联网基础设施的普及以及低限城市购买力的增强，占据全国人口大多数的低线城市，将成为互联网争夺的下一个高地。</p>
+<h3 id="7月23日"><a href="#7月23日" class="headerlink" title="7月23日"></a>7月23日</h3><blockquote>
+<p><strong>唠嗑：微信读书是如何“让阅读不再孤单”的？</strong></p>
+</blockquote>
+<p>最近在用微信读书APP，想谈一个比较有意思的点。</p>
+<p><strong>微信读书的slogan是：让阅读不再孤单。那么，它到底是通过哪些方法让阅读不再孤单的呢？我总结了以下几点：</strong></p>
+<p><strong>1、阅读过程中的评论交互：</strong>用户在阅读时，可以直接对文中的某句话进行评论，同时也可以看到其他人的评论，评论的文字下方以波浪线标注。读者点击该句话可以看到这句话的所有评论，并可以对这些评论进行点赞或者评论。这个功能，加强了用户之间的交流，让阅读变得不再是自己一个人的事情。在这种方式下，用户能够与其他读者进行跨时空的探讨，而这种思维的碰撞在某些时候的价值甚至超越了书本的本身。</p>
+<p><strong>2、好友关注：</strong>由于微信读书APP是使用微信账号登录的，因此可以直接获取到用户的好友列表，对于同样在使用微信读书APP的好友，用户可以对其进行关注。相应的，好友也可以关注自己。用户可以查看自己好友的基本阅读信息，包括阅读时长、获赞数、粉丝数、书架等。</p>
+<p><strong>3、读书排行榜：</strong>微信读书会按照用户及其好友的读书时长，生成一个按照读书时长的排行榜，用户可以在排行榜上看到自己与好友的排名情况以及各自的读书时长，排行榜信息每周一刷新。排行榜最根本的作用，无非就是激烈。微信读书期望通过排行榜，来激起用户的读书欲望，从而获得更长的用户停留时间。</p>
+<p><strong>4、好友组队领取无限卡：</strong>无限卡相当于会员卡，可以让用户免费阅读所有书籍。无限卡的获取方式有多种，既可以通过购买的方式获得，也可以通过邀请好友组队的方式获得。对于不想花钱的用户来说，邀请好有组队领取一定时间的无限卡，无疑是一种很好的选择。无限卡的运营模式，一方面加强了用户之间的交互，“让阅读不再孤单”，另一方面也可以借此实现用户的持续增长。</p>
+<p>总结来说，微信采用的“让阅读不再孤单”的方法，就是加强用户之间的交互。不论是评论、关注，还是排行版和组队领无限卡，都强化了不同用户之间的互动。从这个层面来说，微信读书不愧是微信的亲儿子，它从基因上都带有社交的烙印。也正因如此，面对市场上诸多的读书APP，微信读书以社交为破口，辅以有效的运营手段，最终在读书类产品中拥有了一席之地。</p>
+<h3 id="7月22日"><a href="#7月22日" class="headerlink" title="7月22日"></a>7月22日</h3><blockquote>
+<p><strong>问题：如何入门数据分析？</strong></p>
+</blockquote>
+<p>这是来自<a href="https://www.pmcaff.com/discuss/index/1909021207234624/?newwindow=1" target="_blank" rel="noopener">pmcaff</a>的一个问题，以下是我的回答。</p>
+<p>其实与其说是回答，不如说是我自己的数据分析的学习规划。数据分析能力是产品经理的必备能力之一，所以我也在系统的学习一些数据分析的知识。</p>
+<p><strong>数据分析分为两个不同的层面：偏业务的层面和偏技术的层面。</strong></p>
+<p>1、偏业务的层面主要使用的工具包括Excel、SQL和一部分Python。</p>
+<p>2、偏技术层面主要是指数据挖掘和机器学习。</p>
+<p><strong>我觉得数据分析需要主要需要学三个方面的技能：</strong></p>
+<p>1、统计学知识</p>
+<p>2、数据分析工具：Excel、SQL、SPSS、Python/R等</p>
+<p>3、相关领域的业务知识</p>
+<p>至于怎么去学，无非是理论到实践，先学统计学知识或者分析工具，打下一定基础之后，动手做一些数据分析的项目，经历从数据采集、数据清洗、数据分析到数据展示的全过程。</p>
+<h3 id="7月21日"><a href="#7月21日" class="headerlink" title="7月21日"></a>7月21日</h3><blockquote>
+<p><strong>问题：如何看待微信7.0.5版本更新的可同时设置5个浮窗的功能？</strong></p>
+</blockquote>
+<p>最近网上关于这个的讨论很热烈，我也想说说自己的看法。</p>
+<p>微信7.0.5版本上线了新的浮窗功能，小程序、收藏笔记、文件预览都可以变成浮窗，最多同时支持5个浮窗。</p>
+<p>对于一些比较长的微信文章，用户可能无法一次性看完，在浮窗功能上线之前，用户如果需要跳出阅读界面（如回复消息），就只能关闭正在阅读的文章，当用户需要再次阅读的时候，必须重新进入订阅号找到该文章。可以看到，在这个需求场景下，用户的操作成本是很高的。而浮窗功能的上线，很好地解决了这个问题。对于需要暂时离开的页面，只要将其缩小成浮窗，等到继续阅读时点击浮窗即可。浮窗功能，非常类似PC端页面的最小化。这样，一来减少了用户的操作步骤，二来能够起到提醒用户的作用。从更深层次来看，能够提高用户在微信上的停留时间。</p>
+<p>对于微信的重度使用者而言，一个浮窗难以满足其需求，而仅仅是公众号文章可以缩小成浮窗，功能未免有些单一。因此，微信7.0.5版本对此做出了更新。</p>
+<p><strong>那么这次更新的意义有哪些呢：</strong></p>
+<p>1、满足用户更多的需求场景，优化用户体验。</p>
+<p>2、增加用户在微信的停留时间，增强用户粘性。</p>
+<p>3、完善微信生态体系。</p>
+<p>任何事情都有两面性，微信浮窗的增多确实能够进一步发掘并满足用户的需求，但同时也让微信变得越来越“重”，越来越复杂，同时也会加重用户手机的系统负担。</p>
+<p>但好在微信在这方面一直都做得很好，对于新增加的功能，微信很多时候不是通过增加菜单的方式提供入口，而是通过手势的交互方式，把这些功能“藏起来”，至少让用户在UI上直接看不出复杂度的增加。至于手机系统的开销，我相信随着智能手机的进一步发展和5G时代的来临，也将不是问题。</p>
+<h3 id="7月20日"><a href="#7月20日" class="headerlink" title="7月20日"></a>7月20日</h3><blockquote>
+<p><strong>问题：产品经理的门槛越来越低了吗？</strong></p>
+</blockquote>
+<p>这是来自<a href="https://www.pmcaff.com/discuss/index/1903150094155840/?newwindow=1" target="_blank" rel="noopener">pmcaff</a>的一个问题，以下是我的回答。</p>
+<p><strong>先说观点：我认为产品经理的隐性门槛很高，甚至我觉得做产品是一件非常需要天赋的事情。</strong></p>
+<p>做产品绝不是画画原型，做做竞品分析那么简单的事情。一个优秀产品经理的综合能力应该是极高的，写文档、画原型、数据分析等等只是最基本的要求，对用户的理解和对行业的理解才是其真正的核心所在。</p>
+<p>那么为什么有人觉得产品经理的门槛越来越低了呢，我想原因有三个方面：</p>
+<p><strong>第一，某些用人单位盲目招聘产品经理，但缺乏筛选产品经理和培养产品经理的能力。</strong></p>
+<p>随着产品岗的火热，很多互联网公司，甚至非互联网公司，都开始招产品经理。然而有些公司并不需要产品经理，甚至他们连产品经理的具体职责是什么都不知道，就敢在招聘网站上发布产品经理的职位（本人有过亲身面试经历）。相应的，也不能奢望他们懂得如何面试产品经理。用人单位这种随大流的盲目性，一方面让产品岗变得更加火热，另一方面也拉低了产品经理群体的平均业务水平。特别是对于抱着学习态度，想进公司进一步学习产品知识的新人来说，这些公司无疑是一个大坑。</p>
+<p><strong>第二，产品经理应聘者背景多样，数量众多，专业性不强。</strong></p>
+<p>一句江湖传言——“产品经理是CEO的学前班”，让无数人盯上了产品经理的岗位。再加上懂技术不是产品经理的必需技能，更让众多非科班（CS相关专业）的应聘者对产品岗虎视眈眈，将其视为转行互联网的终南捷径。应聘者的专业背景五花八门，数量众多，当然会让很多人觉得产品经理的门槛很低。</p>
+<p><strong>第三，培训机构的煽风点火。</strong></p>
+<p>培训机构为招揽学员，极言产品经理的薪资待遇之优渥，入行之简单，也是原因之一。</p>
+<p>最后，产品经理的门槛低不低，我想只要查看一下各大公司产品岗的录用比就能一目了然。就像有人说的，“潮水退后，才知谁在裸泳”。做产品不易，好好学习才是正道，与诸君共勉。</p>
+<h3 id="7月19日"><a href="#7月19日" class="headerlink" title="7月19日"></a>7月19日</h3><blockquote>
+<p><strong>问题：互联网产品怎么分类？</strong></p>
+</blockquote>
+<p>大家每天都在用各式各样的互联网产品，那么常见的互联网产品类别还有哪些呢？今天，让我们一起来做一个总结吧。</p>
+<p><strong>一、按服务对象分</strong></p>
+<p>1、TOC 产品：面向普通大众用户</p>
+<ul>
+<li>代表：微信、QQ、陌陌、探探</li>
+</ul>
+<p>2、TOB 产品：面向企业用户</p>
+<ul>
+<li>代表：钉钉、1688</li>
+</ul>
+<p><strong>二、按运行载体分</strong></p>
+<p>1、手机移动端产品</p>
+<p>2、PC端产品</p>
+<p>3、其他职能终端产品</p>
+<p><strong>三、按用户需求分</strong></p>
+<p>1、社交型产品</p>
+<ul>
+<li>代表：微信、QQ、陌陌、探探</li>
+</ul>
+<p>2、内容型产品</p>
+<ul>
+<li>代表：今日头条、知乎</li>
+</ul>
+<p>3、工具型产品</p>
+<ul>
+<li>代表：番茄TODO</li>
+</ul>
+<p>4、平台型产品</p>
+<ul>
+<li>代表：淘宝、京东</li>
+</ul>
+<p>5、游戏</p>
+<h3 id="7月18日"><a href="#7月18日" class="headerlink" title="7月18日"></a>7月18日</h3><blockquote>
+<p><strong>唠嗑：关于微信，我的看法。</strong></p>
+</blockquote>
+<p>前两天，微信更新了7.0.5版本，上线了多浮窗系统，小程序、收藏笔记、文件预览都可以变成浮窗，最多同时支持5个浮窗。借此机会，我想和大家聊聊关于微信，我的看法。</p>
+<p>今天的微信，很难再用即时通信工具（IM：instant messaging）的标准去评价它。微信已成为了一个庞然大物，一个集社交平台、内容平台、电商平台和小程序的多领域生态系统。毋庸置疑，拥有10亿+用户的微信是一个成功的互联网产品，甚至可以说是划时代的互联网产品。今天，我不想从宏观的角度，对微信做一个全方位的评价。既然主题是“唠嗑”，那么我只想谈谈我个人的一些非常浅薄的看法。</p>
+<p>很多人对微信的看法，仅仅停留在其作为社交工具的层面，也正因如此，微信一开始并不讨某些用户的喜欢，特别是年轻人。我不否认，从单一的社交工具层面来说，微信在有些方面确实体验不够好（我就不举例子了，相信每个人都能说出几条）。“微信没有QQ好用”，相信是很多用户对微信最初的印象，这其中也包括我。但当我开始学习产品的知识后，我才意识到，原来，微信这么“不简单”。</p>
+<p>我想将微信的精神，总结为两个词：克制、勇敢。没错，我用了“精神”这个词语。</p>
+<p><strong>克制：</strong> 随便拉一个人过来，让他说说微信有哪些不足，应该怎样改进，我想人人都能说出个四五六七八条来。那么问题的关键来了，微信团队为什么没有去改进这些所谓的不足，难道他们听不见用户的声音吗？答案肯定是否定的。微信没有去做，无外乎两个原因：第一，这些需求不能代表绝大多数用户，不值得去做；第二，做这些需求需要付出的代价太大，或者还没有到合适的时机。说微信很克制，是因为她没有去谄媚用户，没有失掉自己做产品的追求和底线。用户可以提出自己的需求，但做还是不做，决定权在微信手中。如果一个产品发展到了被用户绑架的地步，那么这款产品离棺材板已经不远了。</p>
+<p><strong>勇敢：</strong> 看上去，“勇敢”和“克制”仿佛自相矛盾，其实不然。微信的勇敢，在于她敢于改变。创新是一款产品长久发展的源泉，微信正是如此。从语音聊天，到朋友圈，从公众平台，再到小程序，微信一直在按照自己的发展节奏，做出不一样的东西。也许某些方面微信不是首创，但以微信的体量敢于不断进行尝试，不可谓不勇敢。大的改变，大家有目共睹，但小的尝试，微信也从未间断。在很多普通用户根本不会关注到的二级菜单、三级菜单甚至更深的地方，微信一直进行更新。这些更新，微信表现得非常低调，仿佛是怕用户发现了一般。微信可能就像一个偷偷学习的孩子，想在关键的时候给父母一个突然的惊喜。以微信的用户基数，其每一个小小的改动，都将对数以亿计的用户产生深刻的影响，但她仍然敢做。你可以说微信家大业大，承担得起试错的成本，但你不能否认她的勇敢。</p>
+<p>以上就是关于微信，我的看法。我作为一个产品学习者，对好的产品确实有一种崇拜的心理，难以保持客观，但我毕竟还在学习，不是吗？</p>
+<h3 id="7月17日"><a href="#7月17日" class="headerlink" title="7月17日"></a>7月17日</h3><blockquote>
+<p><strong>点子：美团、饿了么等外卖平台，如果做一个“定时点餐”的功能会怎么样？</strong></p>
+</blockquote>
+<p>这个“定时点餐”的功能是这样的：用户可以制订未来一段时间内的点餐计划，到计划时间时，系统自动帮用户下单，无需用户再次操作，并且外卖平台可以提供多种计划套餐让用户自主选择。</p>
+<p>举个例子：实习生小胡最近开始上班了，因为没有公司食堂，怎么吃午饭成为了他每天中午都要思考的一个问题。 大热天的让他中午下楼找吃的，他实在是不情愿，只好每天中午点外卖。于是，每天中午十一点半点外卖，成了他必须要做的一件事情。可是外卖点多了，他又有了新的苦恼：一是眼花缭乱的外卖让他不知道怎么选，二是每天都要花一会时间点外卖，浪费他的工作时间（是的(#^.^#)）。当他还在为自己又花了十几分钟选外卖而懊悔的时候，“饿了呀”突然推出了“定时点餐”的功能，并且有各种科学营养的套餐可以选择！这怎么能让他不欢呼雀跃！简直是想睡觉就有人送枕头！于是小胡使用“饿了呀”这个新功能，一下子做好了接下来一周的午餐计划。接下来的一周内，小胡再也没有打开过“饿了呀”。每到中午的时候，他都会接到取餐电话，然后吃上自己点餐计划中的午饭。他太幸福了，因为“饿了呀”这个“定时点餐”的功能，他每天可以再多工作十分钟！（以上故事纯属虚构）</p>
+<p><strong>我当然没有自大到以为自己这个idea有多么牛×，冷静下来后，不禁思考，外卖平台没有去做这个功能，不外乎以下三种原因之一：</strong></p>
+<p>1、这是个伪需求，实际上需要的用户不多。</p>
+<p>2、这是个真需求，但对平台而言，弊大于利。</p>
+<p>3、这是个真需求，但是他们没人想到，就我想到了。</p>
+<p>那么答案已经出来了，不是1就是2，或者两者都有一点。</p>
+<p>回过头来想，个人认为原因1的可能性最大，毕竟点外卖归根结底仍然是一种购物行为，而购物的目的不单单是购买物品或者服务，对于购物过程的享受（特别是女性）也是一个重要的出发点，也就是所谓的逛街（gai）。只逛不买的行为，相信大家都有做过（我就看看，不买的，相信我）。那么回到点外卖这件事情上，也是同样的道理，难道逛外卖就不可以成为一种精神上的享受吗？也许对于有些人来说，上班之余，看一看中午吃什么外卖，那一刻的满足，是支撑他坚持上班/上课，最后的倔强。</p>
+<p>再说原因2，这个功能给平台带来的最直接的弊端，就是减少了用户APP的打开率，进而直接减少了平台的用户流量。虽然外卖平台不像社交平台或者内容平台，那么得依赖用户流量，但流量的减少，对任何平台来说都是一种伤害。企业的根本目的是盈利，这是再简单不过的经济学原理。用户价值只不过是实现商业价值的手段而已，至于追求短期的商业价值，还是长远的商业价值，就要看平台自己的抉择了。</p>
+<h3 id="7月16日"><a href="#7月16日" class="headerlink" title="7月16日"></a>7月16日</h3><blockquote>
+<p><strong>问题：为什么微信订阅号要改版为feed流的形式？</strong></p>
+</blockquote>
+<p>回答这个问题之前，有必要先了解一下什么是feed流。</p>
+<p>feed流，是将用户主动订阅的若干消息源组合在一起形成内容聚合器，帮助用户持续的获取最新的订阅源内容。从广义上来讲，持续更新并呈现给用户的内容都叫做feed流。feed流的应用十分常见，比如朋友圈、知乎、微博等等，无不是应用了feed流的展示方式。 而feed流的核心无非就是两个方面：一是将什么样的内容推送给用户；二是采用什么方式推送给用户。</p>
+<p><strong>feed流的发展可以分为三个阶段：</strong></p>
+<p>1、第一阶段：RSS中用来接收消息来源更新的接口（RSS阅读器：一个可以收集你关心的网站更新内容的一个应用）。</p>
+<p>2、第二阶段：Facebook将好友或者关注的对象作为信息源，此时的feed即是好友的动态。用户只需轻松地上下滑动，就可浏览好友动态。这一阶段的feed流，用户必须先关注好友，然后才能看到他们发布的内容和社交行为。</p>
+<p>3、第三阶段：Feed流中的内容已经不局限在用户必须先关注才能看到，而是变成“持续更新并呈现给用户的内容都叫做feed流”，最典型的例子比如今日头条，它会根据用户的兴趣不断推送各种新闻。</p>
+<p><strong>feed流的展示方式主要有三种：</strong></p>
+<p>1、时间排序法：按照时间从现在到过去排列，如朋友圈等。</p>
+<p>2、重力排序法：重力——时间；拉力——用户喜好，即按时间衰减和内容受欢迎程度综合排序，如知乎、豆瓣等。</p>
+<p>3、智能算法排序法：使用算法为用户进行个性化推荐，如抖音、头条等。</p>
+<p><strong>那么相较于其它的内容分发方式，feed流究竟有什么优势，让其被如此广泛地采用呢？我认为，主要有以下几个方面：</strong></p>
+<p>1、对用户而言，feed流能够让用户按照一定的规则，在极短的时间内获取最新的（时间排序法）或者最有价值的（重力排序法、智能算法排序法）信息，较少用户获取信息的成本，提升用户体验。</p>
+<p>2、对平台而言，feed流能够增强平台的用户粘性，增加用户在平台上的停留时间，增大平台的流量。同时，feed流广告也将为平台带来不菲的收入。</p>
+<p><strong>至于微信为什么将订阅号的消息展示形式改为feed流，原因有三：</strong></p>
+<p>1、提升公众号文章的点击率。</p>
+<p>2、留住优质的创作者。对于内容创作者而言，更大的曝光度，意味着更大的支持，甚至意味着更高的收入。</p>
+<p>3、优化用户体验。让用户更快更高效地获取信息。</p>
+<p>当然，改版之后的效果到底如何，还是要用数据说话。微信在正式改版之前做过A/B测试，相信测试得到的数据也给了其坚定改版的决心。</p>
+<h3 id="7月15日"><a href="#7月15日" class="headerlink" title="7月15日"></a>7月15日</h3><blockquote>
+<p><strong>问题：抖音上的视频为什么没有进度条？</strong></p>
+</blockquote>
+<p>抖音一直以来都想为用户创造一个沉浸式体验的环境，不管是全屏是视频展示，还是非常简单的操作逻辑，都是为了让用户沉浸下去，从而尽可能的占领用户更多的时间。毕竟，对于互联网产品而言，流量就是金钱。因此，私以为抖音上的视频没有进度条，最大的原因就在于减少对用户的干扰，让用户获得更沉浸的体验，悄悄地从用户手中偷走时间。</p>
+<p>另一个显而易见的原因是，抖音上的视频都非常短，大多数只有短短十来秒，进度条实际上的价值也不大，就更没必要多此一举了。</p>
+<p>抖音是如何让用户上瘾的，是一个非常值得研究的话题。在此挖个坑，以后专门写一篇博客对此进行分析。</p>
+<h3 id="7月14日"><a href="#7月14日" class="headerlink" title="7月14日"></a>7月14日</h3><blockquote>
+<p><strong>问题：微信为什么不能查看他人的浏览记录？</strong></p>
+</blockquote>
+<p>1、微信主打熟人社交，相比于陌生人，熟人之间的好奇心更弱，因此这个需求不是很有必要。</p>
+<p>2、出于保护用户隐私的考虑。相比于QQ，微信最大的特点之一就是其对用户的隐私保护得更好，因此这个功能与微信保护用户隐私的初衷不符。</p>
+<p>3、减轻社交压力的考虑。随着微信用户规模的不断扩大，用户在朋友圈受到的社交压力也越来越大。而社交压力的增大最直接的影响就是，微信用户变得越来越不愿意去发朋友圈，这当然不是微信所希望看到的（<a href="https://huruixiang.github.io/2019/05/09/002/">关于朋友圈之于微信的战略价值，可以查看这篇文章</a>）。无论是朋友圈三天可见、还是朋友圈内容可设置查看权限，都有减轻朋友圈社交压力的考虑，进而挽留用户。而允许用户查看他人对自己的浏览记录，毫无疑问会进一步增大微信朋友圈的社交压力，再加上并没有很大的用户需求，所以微信没做。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日更/" rel="tag"><i class="fa fa-tag"></i> 日更</a>
+          
+            <a href="/tags/产品思考/" rel="tag"><i class="fa fa-tag"></i> 产品思考</a>
+          
+            <a href="/tags/问题/" rel="tag"><i class="fa fa-tag"></i> 问题</a>
+          
+            <a href="/tags/点子/" rel="tag"><i class="fa fa-tag"></i> 点子</a>
+          
+            <a href="/tags/唠嗑/" rel="tag"><i class="fa fa-tag"></i> 唠嗑</a>
+          
+            <a href="/tags/笔试题/" rel="tag"><i class="fa fa-tag"></i> 笔试题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/11/007/" rel="next" title="利用Python制作一个注册/登录的小窗体">
+                <i class="fa fa-chevron-left"></i> 利用Python制作一个注册/登录的小窗体
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/008/" rel="prev" title="读书笔记：《启示录：打造用户喜爱的产品》">
+                读书笔记：《启示录：打造用户喜爱的产品》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.jpg" alt="胡瑞祥">
+            
+              <p class="site-author-name" itemprop="name">胡瑞祥</p>
+              <div class="site-description motion-element" itemprop="description">Idleness is the root of all evil.</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/HuRuixiang" title="GitHub &rarr; https://github.com/HuRuixiang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://tuchong.com/1690244/" title="Tuchong &rarr; https://tuchong.com/1690244/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>Tuchong</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.weibo.com/6040489819/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="Weibo &rarr; https://www.weibo.com/6040489819/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#7月31日"><span class="nav-number">1.</span> <span class="nav-text">7月31日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月30日"><span class="nav-number">2.</span> <span class="nav-text">7月30日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月29日"><span class="nav-number">3.</span> <span class="nav-text">7月29日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月28日"><span class="nav-number">4.</span> <span class="nav-text">7月28日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月27日"><span class="nav-number">5.</span> <span class="nav-text">7月27日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月26日"><span class="nav-number">6.</span> <span class="nav-text">7月26日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月25日"><span class="nav-number">7.</span> <span class="nav-text">7月25日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月24日"><span class="nav-number">8.</span> <span class="nav-text">7月24日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月23日"><span class="nav-number">9.</span> <span class="nav-text">7月23日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月22日"><span class="nav-number">10.</span> <span class="nav-text">7月22日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月21日"><span class="nav-number">11.</span> <span class="nav-text">7月21日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月20日"><span class="nav-number">12.</span> <span class="nav-text">7月20日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月19日"><span class="nav-number">13.</span> <span class="nav-text">7月19日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月18日"><span class="nav-number">14.</span> <span class="nav-text">7月18日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月17日"><span class="nav-number">15.</span> <span class="nav-text">7月17日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月16日"><span class="nav-number">16.</span> <span class="nav-text">7月16日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月15日"><span class="nav-number">17.</span> <span class="nav-text">7月15日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月14日"><span class="nav-number">18.</span> <span class="nav-text">7月14日</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">胡瑞祥</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">32k</span>
+  
+
+  
+</div>
+
+<!-- 
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.1</div>
+-->
+
+
+
+<!-- <div id="days"></div>
+<script>
+function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("04/17/2018 15:13:14");//修改为自己的blog建站时间
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=setzero(Math.floor(e_hrsold));
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+    seconds=setzero(Math.floor((e_minsold-minsold)*60));
+    document.getElementById('days').innerHTML="本站已安全运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>-->
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="190,190,190" opacity="0.7" zindex="-1" count="70" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'wtE072pn1xSTRuPet62dpDtg-gzGzoHsz',
+    appKey: '7L1m7GMK6sFMvLpS7xYQc3li',
+    placeholder: '评论一下，可以在上面留下自己的昵称、邮箱和主页哦~',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心，在末尾添加，避免找不到 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":180,"height":360,"hOffset":70,"vOffset":-70},"mobile":{"show":false},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false,"tagMode":false});</script></body>
+</html>
